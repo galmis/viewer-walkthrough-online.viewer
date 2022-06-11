@@ -15,6 +15,8 @@
 // UNINTERRUPTED OR ERROR FREE.
 /////////////////////////////////////////////////////////////////////
 
+require('dotenv').config();
+
 //-------------------------------------------------------------------
 // These packages are included in package.json.
 // Run `npm install` to install them.
