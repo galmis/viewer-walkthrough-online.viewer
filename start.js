@@ -31,8 +31,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/www'));
 
-// This is for web server to start listening to port 3000
-app.set('port', 3000);
+// This is for web server to start listening to to dynamic port number in heroku and 3000 locally
+var port = parseInt(process.env.PORT || '8081', 10);
+app.set('port', port);
 var server = app.listen(app.get('port'), function () {
     console.log('Server listening on port ' + server.address().port);
 });
